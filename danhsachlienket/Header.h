@@ -1,0 +1,80 @@
+#include <iostream>
+using namespace std;
+
+void menu();
+void menu_dslk_don();
+void menu_dslk_kep();
+void menu_dslk_vong();
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////DANH_SACH_LIEN_KET_DON////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+struct Node_Don {
+	int data;
+	Node_Don* next;
+};
+typedef Node_Don* Nodeptr_Don;
+typedef Nodeptr_Don	SList;
+Nodeptr_Don tao_Node_Don(int data);
+void khoiTao_Don(SList& slist);
+void themDau_Don(SList& slist, int data);
+void themCuoi_Don(SList& slist, int data);
+void nhapDanhSach_Don(SList& slist);
+void xuatDanhSach_Don(SList slist);
+void xoa_phantu_Don(SList &slist,int so_can_xoa);
+void sua_Don(SList& slist, int so_cu, int so_moi);
+void daoNguoc_Don(SList &slist);
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////DANH_SACH_LIEN_KET_KEP////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+struct Node_Kep {
+	int data;
+	Node_Kep* next;
+	Node_Kep* pre;
+};
+
+typedef Node_Kep* Nodeptr_Kep;
+struct DList {
+	Nodeptr_Kep first;
+	Nodeptr_Kep last;
+};
+Nodeptr_Kep tao_Node_Kep(int data);
+int isEmpty(DList dlist);
+void khoiTao_Kep(DList& dlist);
+void themDau_Kep(DList& dlist, int data);
+void themCuoi_Kep(DList& dlist, int data);
+void nhapDanhSach_Kep(DList& dlist);
+void xuatDanhSachThuan_Kep(DList dlist);
+void xuatDanhSachNguoc_Kep(DList dlist);
+void xoa_phantu_Kep(DList& dlist, int so_can_xoa);
+void sua_Kep(DList& dlist, int so_cu, int so_moi);
+void daoNguoc_Kep(DList& dlist);
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////DANH_SACH_LIEN_KET_VONG////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+struct Node_Vong {
+	int data;
+	Node_Vong* link;
+};
+
+typedef Node_Vong* Nodeptr_Vong;
+	
+struct CList {
+	Nodeptr_Vong first;
+	Nodeptr_Vong last; 
+};
+void khoiTao_Vong(CList& clist);
+Nodeptr_Vong tao_Node_Vong(int data);
+int isEmpty_Vong(CList clist);
+void them_Dau_Vong(CList& clist, int x);
+void them_Cuoi_Vong(CList& clist,int x);
+void nhapDanhSach_Vong(CList& clist);
+void xuatDanhSach_Vong(CList clist);
+void xoaNode_Vong(CList& clist, int value);
+void dao_Nguoc_Vong(CList& clist);
+void sua_Node_Vong(CList& clist, int old_data, int new_data);
